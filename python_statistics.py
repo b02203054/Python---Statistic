@@ -4,6 +4,9 @@
 # Subset for Belgium and USA only
 be_and_usa = food_consumption[(food_consumption['country'] == "Belgium") | (food_consumption['country'] == 'USA')]
 
+#Just mean 
+be_consumption.mean()
+
 # Group by country, select consumption column, and compute mean and median
 print(be_and_usa.groupby('country')['consumption'].agg([np.mean, np.median]))
 
